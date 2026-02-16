@@ -1,0 +1,88 @@
+import type { Experience } from "../types/experiences"
+
+export const EXPERIENCES: Experience[] = [
+  {
+    id: "varroc-connect",
+    companyName: "Varroc Connect, Pune",
+    positions: [
+      {
+        id: "varroc-sde-intern",
+        title: "Software Development Intern",
+        employmentPeriod: {
+          start: "07.2025",
+        },
+        employmentType: "Internship",
+        icon: "code",
+        description: `- Enhanced driving-behavior scoring algorithm with weighted factors (skill, experience, safety) using parabolic approach
+- Built real-time Grafana dashboards for manufacturing analytics
+- Optimized database queries: migrated MongoDB to VictoriaMetrics, reduced latency from ~10s to ~0.1s
+- Developed configuration management and downtime tracking dashboards using Svelte and Node.js
+- Built e-commerce marketplace with user migration/sync system
+- Integrated loyalty program with redeemable points based on driving score`,
+        skills: [
+          "Grafana",
+          "VictoriaMetrics",
+          "MongoDB",
+          "Svelte",
+          "Node.js",
+          "E-commerce",
+          "Algorithm Development",
+          "Dashboard Development",
+        ],
+        isExpanded: true,
+      },
+    ],
+    isCurrentEmployer: true,
+  },
+  {
+    id: "education",
+    companyName: "Education",
+    positions: [
+      {
+        id: "vit-pune",
+        title: "Vishwakarma Institute of Technology, Pune",
+        employmentPeriod: {
+          start: "2022",
+          end: "2026",
+        },
+        icon: "education",
+        description: `B.TECH (Artificial Intelligence and Data Science)
+CGPA: 8.66/10`,
+        skills: [
+          "Artificial Intelligence",
+          "Machine Learning",
+          "Python",
+          "Java",
+          "Algorithms",
+        ],
+        isExpanded: true,
+      },
+      {
+        id: "novel-college",
+        title: "Novel Junior College of Science and Commerce, Pune",
+        employmentPeriod: {
+          start: "2020",
+          end: "2022",
+        },
+        icon: "education",
+        description: `HSC (Class XII)
+Percentage: 88%`,
+        skills: ["Science", "Mathematics"],
+        isExpanded: true,
+      },
+      {
+        id: "sterling-school",
+        title: "NCRD's Sterling High School, Pune",
+        employmentPeriod: {
+          start: "2010",
+          end: "2020",
+        },
+        icon: "education",
+        description: `SSC (Class X)
+Percentage: 96%`,
+        skills: ["Academic Excellence"],
+        isExpanded: true,
+      },
+    ],
+  },
+]
