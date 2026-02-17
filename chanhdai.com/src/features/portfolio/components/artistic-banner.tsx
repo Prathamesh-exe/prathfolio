@@ -4,15 +4,11 @@ import { useEffect, useState } from "react"
 import { cn } from "@/lib/utils"
 
 export function ArtisticBanner() {
-  const greetings = ["Hello!", "नमस्कार!", "नमस्ते!", "Hallo!", "¡Hola!", "Bonjour!", "こんにちは!"]
-  const [currentGreeting, setCurrentGreeting] = useState(0)
+  const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentGreeting((prev) => (prev + 1) % greetings.length)
-    }, 3000)
-    return () => clearInterval(interval)
-  }, [greetings.length])
+    setIsVisible(true)
+  }, [])
 
   return (
     <div
@@ -20,69 +16,93 @@ export function ArtisticBanner() {
         "aspect-2/1 border-x border-edge select-none sm:aspect-3/1 relative overflow-hidden",
         "flex items-center justify-center",
         "screen-line-before screen-line-after before:-top-px after:-bottom-px",
-        "bg-black/0.75 bg-[radial-gradient(var(--pattern-foreground)_1px,transparent_0)] bg-size-[10px_10px] bg-center [--pattern-foreground:var(--color-zinc-950)]/5 dark:bg-white/0.75 dark:[--pattern-foreground:var(--color-white)]/5"
+        "bg-zinc-50 dark:bg-zinc-950",
+        // Pixelated grid pattern
+        "bg-[repeating-conic-gradient(var(--pattern-color)_0_90deg,transparent_0_180deg)_0_0/8px_8px]",
+        "[--pattern-color:var(--color-zinc-200)] dark:[--pattern-color:var(--color-zinc-900)]"
       )}
     >
-      {/* Floating monochrome orbs */}
-      <div className="absolute inset-0 pointer-events-none">
+      {/* Subtle pixelated squares */}
+      <div className="absolute inset-0 pointer-events-none opacity-20">
         <div
-          className="absolute w-64 h-64 rounded-full opacity-5 blur-3xl bg-zinc-950 dark:bg-zinc-50 animate-float"
-          style={{
-            top: "20%",
-            left: "15%",
-            animationDelay: "0s",
-            animationDuration: "8s",
-          }}
+          className="absolute w-2 h-2 bg-zinc-950 dark:bg-zinc-50 animate-pixel-pulse"
+          style={{ top: "15%", left: "10%", animationDelay: "0s" }}
         />
         <div
-          className="absolute w-48 h-48 rounded-full opacity-5 blur-3xl bg-zinc-950 dark:bg-zinc-50 animate-float"
-          style={{
-            bottom: "25%",
-            right: "20%",
-            animationDelay: "2s",
-            animationDuration: "10s",
-          }}
+          className="absolute w-2 h-2 bg-zinc-950 dark:bg-zinc-50 animate-pixel-pulse"
+          style={{ top: "25%", right: "15%", animationDelay: "1s" }}
         />
         <div
-          className="absolute w-56 h-56 rounded-full opacity-5 blur-3xl bg-zinc-950 dark:bg-zinc-50 animate-float"
-          style={{
-            top: "40%",
-            right: "10%",
-            animationDelay: "4s",
-            animationDuration: "12s",
-          }}
+          className="absolute w-2 h-2 bg-zinc-950 dark:bg-zinc-50 animate-pixel-pulse"
+          style={{ bottom: "20%", left: "20%", animationDelay: "2s" }}
+        />
+        <div
+          className="absolute w-2 h-2 bg-zinc-950 dark:bg-zinc-50 animate-pixel-pulse"
+          style={{ bottom: "30%", right: "25%", animationDelay: "1.5s" }}
+        />
+        <div
+          className="absolute w-2 h-2 bg-zinc-950 dark:bg-zinc-50 animate-pixel-pulse"
+          style={{ top: "50%", left: "5%", animationDelay: "0.5s" }}
+        />
+        <div
+          className="absolute w-2 h-2 bg-zinc-950 dark:bg-zinc-50 animate-pixel-pulse"
+          style={{ top: "60%", right: "8%", animationDelay: "2.5s" }}
         />
       </div>
 
-      {/* Main greeting text */}
-      <div className="relative z-10">
+      {/* Main quote text with pixelated font styling */}
+      <div className="relative z-10 px-4">
         <h2
-          className="px-4 text-center text-4xl font-bold sm:text-5xl md:text-6xl lg:text-7xl text-zinc-950 dark:text-zinc-50 transition-all duration-1000 ease-in-out"
+          className={cn(
+            "text-center text-3xl font-bold sm:text-4xl md:text-5xl lg:text-6xl",
+            "text-zinc-950 dark:text-zinc-50",
+            "tracking-wider uppercase",
+            "transition-all duration-700 ease-out",
+            "font-mono",
+            isVisible ? "opacity-100 scale-100" : "opacity-0 scale-95"
+          )}
+          style={{
+            textShadow: "2px 2px 0px rgba(0, 0, 0, 0.1)",
+            imageRendering: "pixelated",
+          }}
         >
-          {greetings[currentGreeting]}
+          <span className="inline-block hover:scale-105 transition-transform duration-300">
+            sometimes chaos
+          </span>
+          <br />
+          <span className="inline-block hover:scale-105 transition-transform duration-300">
+            sometimes code
+          </span>
         </h2>
-        
-        {/* Subtle accent line */}
-        <div className="mt-4 flex justify-center gap-1">
-          {greetings.map((_, index) => (
-            <div
-              key={index}
-              className={cn(
-                "h-1 rounded-full transition-all duration-500",
-                index === currentGreeting
-                  ? "w-8 bg-zinc-950 dark:bg-zinc-50"
-                  : "w-1 bg-zinc-300 dark:bg-zinc-700"
-              )}
-            />
-          ))}
+
+        {/* Pixelated underline */}
+        <div className="mt-6 flex justify-center">
+          <div className="flex gap-1">
+            {[...Array(5)].map((_, i) => (
+              <div
+                key={i}
+                className="w-2 h-2 bg-zinc-950 dark:bg-zinc-50 animate-pixel-blink"
+                style={{ animationDelay: `${i * 0.2}s` }}
+              />
+            ))}
+          </div>
         </div>
       </div>
 
       <style jsx>{`
-        @keyframes float {
-          0%, 100% { transform: translateY(0px) translateX(0px); }
-          33% { transform: translateY(-20px) translateX(10px); }
-          66% { transform: translateY(10px) translateX(-10px); }
+        @keyframes pixel-pulse {
+          0%, 100% { opacity: 0.2; }
+          50% { opacity: 0.6; }
+        }
+        @keyframes pixel-blink {
+          0%, 80%, 100% { opacity: 1; }
+          40% { opacity: 0.3; }
+        }
+        .animate-pixel-pulse {
+          animation: pixel-pulse 3s ease-in-out infinite;
+        }
+        .animate-pixel-blink {
+          animation: pixel-blink 2s ease-in-out infinite;
         }
       `}</style>
     </div>
