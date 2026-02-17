@@ -19,7 +19,7 @@ export const USER = {
   address: "Pune, Maharashtra, India",
   phoneNumber: "KzkxNzk3MjI1NDM2NQ==", // E.164 format, base64 encoded
   email: "cHJhdGhhbWVzaG1lZGFnZTdAZ21haWwuY29t", // base64 encoded
-  website: "https://yoursite.com", // TODO: Update with your actual domain
+  website: "https://prathfolio.vercel.app",
   jobTitle: "Full Stack Developer",
   jobs: [
     {

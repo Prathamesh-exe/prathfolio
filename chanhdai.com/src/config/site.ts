@@ -3,7 +3,7 @@ import type { NavItem } from "@/types/nav"
 
 export const SITE_INFO = {
   name: USER.displayName,
-  url: process.env.APP_URL || "https://yoursite.com", // TODO: Update with your domain
+  url: process.env.APP_URL || "https://prathfolio.vercel.app",
   ogImage: USER.ogImage,
   description: USER.bio,
   keywords: USER.keywords,
@@ -32,5 +32,5 @@ export const SOURCE_CODE_GITHUB_URL = "https://github.com/prathamesh/prathfolio"
 export const SPONSORSHIP_URL = "https://github.com/sponsors/prathamesh" // TODO: Update or remove
 
 export const UTM_PARAMS = {
-  utm_source: "yoursite.com", // TODO: Update with your domain
+  utm_source: "prathfolio.vercel.app",
 }

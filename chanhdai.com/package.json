@@ -2,7 +2,7 @@
   "name": "prathfolio",
   "version": "0.1.0",
   "description": "A minimal, pixel-perfect dev portfolio showcasing Prathamesh Medage's work.",
-  "homepage": "https://yoursite.com",
+  "homepage": "https://prathfolio.vercel.app",
   "license": "MIT",
   "author": {
     "name": "Prathamesh Medage",
