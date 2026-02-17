@@ -1,24 +1,24 @@
 {
-  "name": "chanhdai.com",
+  "name": "prathfolio",
   "version": "0.1.0",
-  "description": "A minimal, pixel-perfect dev portfolio, component registry, and blog.",
-  "homepage": "https://chanhdai.com",
+  "description": "A minimal, pixel-perfect dev portfolio showcasing Prathamesh Medage's work.",
+  "homepage": "https://yoursite.com",
   "license": "MIT",
   "author": {
-    "name": "Nguyen Chanh Dai",
-    "email": "dai@chanhdai.com",
-    "url": "https://github.com/ncdai"
+    "name": "Prathamesh Medage",
+    "email": "prathameshmedage7@gmail.com",
+    "url": "https://github.com/prathamesh"
   },
   "contributors": [
     {
-      "name": "Nguyen Chanh Dai",
-      "email": "dai@chanhdai.com",
-      "url": "https://github.com/ncdai"
+      "name": "Prathamesh Medage",
+      "email": "prathameshmedage7@gmail.com",
+      "url": "https://github.com/prathamesh"
     }
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ncdai/chanhdai.com.git"
+    "url": "git+https://github.com/prathamesh/prathfolio.git"
   },
   "scripts": {
     "dev": "next dev -p 1408",
