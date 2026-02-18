@@ -13,12 +13,11 @@ export const EXPERIENCES: Experience[] = [
         },
         employmentType: "Internship",
         icon: "code",
-        description: `- Enhanced driving-behavior scoring algorithm with weighted factors (skill, experience, safety) using parabolic approach
-- Built real-time Grafana dashboards for manufacturing analytics
-- Optimized database queries: migrated MongoDB to VictoriaMetrics, reduced latency from ~10s to ~0.1s
-- Developed configuration management and downtime tracking dashboards using Svelte and Node.js
-- Built e-commerce marketplace with user migration/sync system
-- Integrated loyalty program with redeemable points based on driving score`,
+        description: `- Enhanced driving-behavior scoring algorithm with weighted parabolic model
+- Optimized database migration: MongoDB → VictoriaMetrics (10s → 0.1s latency)
+- Built Grafana dashboards for real-time manufacturing analytics
+- Developed downtime tracking and config management dashboards (Svelte + Node.js)
+- Integrated e-commerce marketplace with loyalty points system`,
         skills: [
           "Grafana",
           "VictoriaMetrics",
