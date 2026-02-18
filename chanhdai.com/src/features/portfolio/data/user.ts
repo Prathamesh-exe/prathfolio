@@ -20,7 +20,7 @@ export const USER = {
   phoneNumber: "KzkxNzk3MjI1NDM2NQ==", // E.164 format, base64 encoded
   email: "cHJhdGhhbWVzaG1lZGFnZTdAZ21haWwuY29t", // base64 encoded
   website: "https://prathameshtech.in",
-  jobTitle: "Full Stack Developer",
+  jobTitle: "Full Stack Developer | AI Engineer",
   jobs: [
     {
       title: "Software Developer Intern",
