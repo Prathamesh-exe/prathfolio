@@ -13,7 +13,7 @@
 - All styling and functionality preserved
 
 ### 3. URLs Updated ✓
-- Main domain: `https://prathfolio.vercel.app`
+- Main domain: `https://prathameshtech.in`
 - Package.json: Updated
 - Site config: Updated
 - User profile: Updated
@@ -67,7 +67,7 @@ Test these pages:
 
 6. **Environment Variables**
    - `.env.local` already exists
-   - Add your domain: `APP_URL=https://prathfolio.vercel.app`
+   - Add your domain: `APP_URL=https://prathameshtech.in`
 
 ---
 
@@ -92,7 +92,7 @@ Test these pages:
    - Click "Deploy"
 
 3. **Done!**
-   - You'll get URL: `prathfolio.vercel.app`
+   - You'll get URL: `prathameshtech.in`
    - Add custom domain in settings (if you have one)
 
 ---

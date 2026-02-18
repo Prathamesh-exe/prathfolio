@@ -61,7 +61,7 @@ Before deploying, make sure you've completed these steps:
 5. **Deploy!**
    - Click "Deploy"
    - Wait 2-3 minutes
-   - You'll get a URL like: `prathfolio.vercel.app`
+   - You'll get a URL like: `prathameshtech.in`
 
 6. **Add Custom Domain**
    - Go to Project Settings → Domains

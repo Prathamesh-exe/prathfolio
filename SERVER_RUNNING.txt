@@ -9,7 +9,7 @@
    - Port:     1408
 
 📝 Updated URLs:
-   ✓ Main site: https://prathfolio.vercel.app
+   ✓ Main site: https://prathameshtech.in
    ✓ Package.json updated
    ✓ Site config updated
    ✓ User profile updated
