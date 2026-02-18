@@ -14,8 +14,8 @@ export const EXPERIENCES: Experience[] = [
         employmentType: "Internship",
         icon: "code",
         description: `- Enhanced driving-behavior scoring algorithm with weighted parabolic model
-- Optimized database migration: MongoDB → VictoriaMetrics (10s → 0.1s latency)
-- Built Grafana dashboards for real-time manufacturing analytics
+- Implemented VictoriaMetrics time-series DB for IoT manufacturing analytics (0.1s query latency)
+- Built real-time Grafana dashboards for production monitoring and anomaly detection
 - Developed downtime tracking and config management dashboards (Svelte + Node.js)
 - Integrated e-commerce marketplace with loyalty points system`,
         skills: [
