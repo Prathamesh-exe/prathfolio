@@ -40,9 +40,7 @@ export const PROJECTS: Project[] = [
       "Real-time Analytics",
       "Team Leadership",
     ],
-    description: `Industry Project: e-Zest - An Accion Labs Company
-
-- Lead team to build open-source Power BI alternative with interactive analytics using Power BI REST API
+    description: `- Lead team to build open-source Power BI alternative with interactive analytics using Power BI REST API
 - Implemented WebSockets for real-time data updates and responsive dashboards
 - Developed data processing backend with Node.js
 - Created interactive visualizations using Apache ECharts`,
