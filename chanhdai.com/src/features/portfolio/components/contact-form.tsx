@@ -2,6 +2,7 @@
 
 import { Mail, MapPin, Phone, Send } from "lucide-react"
 import { useState } from "react"
+import { toast } from "sonner"
 
 export function ContactForm() {
   const [formData, setFormData] = useState({
@@ -10,19 +11,41 @@ export function ContactForm() {
     subject: "",
     message: "",
   })
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    setIsSubmitting(true)
 
-    // Create mailto link with form data
-    const mailtoLink = `mailto:prathameshmedage7@gmail.com?subject=${encodeURIComponent(
-      formData.subject || "Contact Form Submission"
-    )}&body=${encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
-    )}`
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      })
 
-    // Open mailto link
-    window.location.href = mailtoLink
+      const data = await response.json() as { error?: string }
+
+      if (response.ok) {
+        toast.success("Message sent successfully! I'll get back to you soon.")
+        // Reset form
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        })
+      } else {
+        toast.error(data.error || "Failed to send message. Please try again.")
+      }
+    } catch (error) {
+      console.error("Error:", error)
+      toast.error("Failed to send message. Please try again later.")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleChange = (
@@ -173,10 +196,11 @@ export function ContactForm() {
 
         <button
           type="submit"
-          className="inline-flex w-full items-center justify-center gap-2 rounded-md border border-edge bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90 focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:outline-none"
+          disabled={isSubmitting}
+          className="inline-flex w-full items-center justify-center gap-2 rounded-md border border-edge bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90 focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed"
         >
           <Send className="size-4" />
-          Send Message
+          {isSubmitting ? "Sending..." : "Send Message"}
         </button>
       </form>
     </div>
