@@ -46,7 +46,7 @@ export const EXPERIENCES: Experience[] = [
         },
         icon: "education",
         description: `B.TECH (Artificial Intelligence and Data Science)
-CGPA: 8.66/10`,
+CGPA: 8.79/10`,
         skills: [
           "Artificial Intelligence",
           "Machine Learning",

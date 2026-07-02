@@ -17,7 +17,6 @@ export const USER = {
     "Svelte | React | Modern Web",
   ],
   address: "Pune, Maharashtra, India",
-  phoneNumber: "KzkxNzk3MjI1NDM2NQ==", // E.164 format, base64 encoded
   email: "cHJhdGhhbWVzaG1lZGFnZTdAZ21haWwuY29t", // base64 encoded
   website: "https://prathameshtech.in",
   jobTitle: "Full Stack Developer | AI Engineer",
