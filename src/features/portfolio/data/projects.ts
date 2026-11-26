@@ -2,6 +2,30 @@ import type { Project } from "../types/projects"
 
 export const PROJECTS: Project[] = [
   {
+    id: "crafting-interpreter",
+    title: "Lox Tree-Walk Interpreter",
+    period: {
+      start: "05.2026",
+      end: "06.2026",
+    },
+    link: "https://github.com/Prathamesh-exe/crafting-interpreter",
+    skills: [
+      "Java",
+      "Compilers",
+      "Interpreters",
+      "Lexer",
+      "Recursive-Descent Parser",
+      "AST",
+      "Visitor Pattern",
+      "Static Analysis",
+    ],
+    description: `- Built a dynamically typed Lox language and tree-walk interpreter from scratch in Java
+- Implemented the full pipeline: scanner, recursive-descent parser, AST, resolver for static scope analysis, and interpreter
+- Supports closures, classes, inheritance, control flow and runtime error reporting
+- Executes programs by walking the AST instead of compiling to bytecode`,
+    isExpanded: true,
+  },
+  {
     id: "proxy-server",
     title: "Multithreaded Proxy Server with LRU Cache",
     period: {
