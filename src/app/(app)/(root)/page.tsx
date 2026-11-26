@@ -2,6 +2,7 @@ import { About } from "@/features/portfolio/components/about"
 import { Certifications } from "@/features/portfolio/components/certifications"
 import { ContactMe } from "@/features/portfolio/components/contact-me"
 import { Experiences } from "@/features/portfolio/components/experiences"
+import { GitHubContributions } from "@/features/portfolio/components/github-contributions"
 import { Overview } from "@/features/portfolio/components/overview"
 import { ProfileCover } from "@/features/portfolio/components/profile-cover"
 import { ProfileHeader } from "@/features/portfolio/components/profile-header"
@@ -47,6 +48,9 @@ export default function Page() {
         <Separator />
 
         <TechStack />
+        <Separator />
+
+        <GitHubContributions />
         <Separator />
 
         <Experiences />

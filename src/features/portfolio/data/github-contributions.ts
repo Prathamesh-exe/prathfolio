@@ -7,14 +7,27 @@ type GitHubContributionsResponse = {
   contributions: Activity[]
 }
 
+const API_BASE =
+  process.env.GITHUB_CONTRIBUTIONS_API_URL ||
+  "https://github-contributions-api.jogruber.de"
+
 export const getGitHubContributions = unstable_cache(
-  async () => {
-    const res = await fetch(
-      `${process.env.GITHUB_CONTRIBUTIONS_API_URL}/v4/${GITHUB_USERNAME}?y=last`
-    )
-    const data = (await res.json()) as GitHubContributionsResponse
-    return data.contributions
+  async (): Promise<Activity[]> => {
+    try {
+      const res = await fetch(`${API_BASE}/v4/${GITHUB_USERNAME}?y=last`, {
+        next: { revalidate: 86400 },
+      })
+
+      if (!res.ok) {
+        return []
+      }
+
+      const data = (await res.json()) as GitHubContributionsResponse
+      return data.contributions ?? []
+    } catch {
+      return []
+    }
   },
-  ["github-contributions"],
+  ["github-contributions", GITHUB_USERNAME],
   { revalidate: 86400 } // Cache for 1 day (86400 seconds)
 )
