@@ -1,95 +1,96 @@
-<div align="center">
+# prathfolio
 
-# 👋 Hi, I'm Prathamesh Medage
+Personal portfolio of **Prathamesh Medage** — Full Stack Developer / AI Engineer.
+Live at [prathameshtech.in](https://prathameshtech.in).
 
-### Full Stack Developer | AI Engineer
+A minimal, terminal-inspired portfolio built on Next.js 16 (App Router): profile,
+experience, projects, awards, certifications, tech stack, testimonials, contact
+form, plus a small MDX blog and a shadcn component registry.
 
-_Chaos, containerized._
+## Tech stack
 
-[![Portfolio](https://img.shields.io/badge/🌐_Portfolio-Visit-orange?style=for-the-badge)](https://chanhdai.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/prathamesh-medage)
-[![Location](https://img.shields.io/badge/📍_Pune-India-green?style=for-the-badge)](https://maps.google.com/?q=Pune)
+- **Framework:** Next.js 16 (App Router, Turbopack), React 19, TypeScript (strict)
+- **Styling:** Tailwind CSS v4, shadcn/ui + Base UI primitives, `motion`
+- **Content:** MDX (`next-mdx-remote`), custom blog loader
+- **Email:** Resend (contact form API route)
+- **Tooling:** pnpm 10, ESLint, Prettier, Husky + lint-staged, shadcn registry
 
-📧 **prathameshmedage7@gmail.com**
+## Project structure
 
-</div>
+```
+src/
+├── app/                      routes (App Router)
+│   ├── (app)/(root)/         home page (portfolio)
+│   ├── (app)/contact/        contact page
+│   ├── (app)/(docs)/         blog, components, sponsors, testimonials
+│   ├── (llms)/               llms.txt / markdown endpoints for agents
+│   ├── api/contact/          contact form handler (Resend)
+│   └── og/, vcard/           OG image and vCard generators
+├── features/
+│   ├── portfolio/            portfolio sections + your data
+│   └── blog/                 blog UI, content (MDX) and loader
+├── components/               shared UI components
+├── registry/                 shadcn registry definitions
+├── __registry__/             generated registry output (do not edit)
+├── config/                   site + registry configuration
+├── hooks/, lib/, utils/      shared helpers
+└── styles/                   global CSS and Tailwind theme
+public/                       images, icons, generated registry JSON
+```
 
----
+## Where to edit your content
 
-## 🚀 About Me
+| What                                        | File                                                          |
+| ------------------------------------------- | ------------------------------------------------------------- |
+| Name, bio, email, avatar, timezone          | `src/features/portfolio/data/user.ts`                         |
+| Site URL, nav, GitHub username, sponsorship | `src/config/site.ts`                                          |
+| Work experience                             | `src/features/portfolio/data/experiences.ts`                  |
+| Projects                                    | `src/features/portfolio/data/projects.ts`                     |
+| Tech stack                                  | `src/features/portfolio/data/tech-stack.ts`                   |
+| Awards / certifications                     | `src/features/portfolio/data/awards.ts`, `certifications.ts`  |
+| Social links                                | `src/features/portfolio/data/social-links.ts`                 |
+| Testimonials / bookmarks                    | `src/features/portfolio/data/testimonials.ts`, `bookmarks.ts` |
+| Blog posts                                  | `src/features/blog/content/*.mdx`                             |
+| Profile photo / OG image                    | `public/profile.png`, `public/og-image.png`                   |
 
-**Full Stack Developer** specializing in **AI/GenAI** and modern web technologies. Passionate about building scalable, intelligent applications that solve real-world problems.
+## Routes
 
-🤖 **AI/GenAI Focus:** Working with **LLMs**, **Transformers**, **RAG**, **Agentic AI**, and **MCP**  
-⚡ **Full Stack:** Building production-ready applications with **Java**, **Python**, **Node.js**, **FastAPI**, **Next.js**  
-📊 **Data & Scale:** Experience with distributed systems, **Kafka**, time-series databases (**VictoriaMetrics**), and observability  
-🌱 **Always Learning:** Exploring cutting-edge tech in **AI**, **Data Science**, and **Cloud Native** development
+| Route                               | Purpose                                     |
+| ----------------------------------- | ------------------------------------------- |
+| `/`                                 | Portfolio home                              |
+| `/contact`                          | Contact page (form posts to `/api/contact`) |
+| `/blog`, `/blog/[slug]`             | MDX blog + RSS at `/blog/rss`               |
+| `/components`, `/components/[slug]` | Component registry showcase                 |
+| `/sponsors`, `/testimonials`        | Supporters and testimonials                 |
+| `/llms.txt`, `/*.md`                | Plain-text/markdown output for LLM agents   |
+| `/vcard`, `/rss`                    | vCard download, legacy RSS redirect         |
 
----
+## Deployment
 
-## 🛠️ Tech Stack
+The app lives at the repository root, so Vercel needs no Root Directory override:
 
-### Languages
+1. Import the repo on [Vercel](https://vercel.com/new).
+2. Framework: **Next.js** (auto-detected). Build `pnpm build`, install `pnpm install`.
+3. Set `APP_URL` to the production URL (e.g. `https://prathameshtech.in`).
+4. Optional: `RESEND_API_KEY` for the contact form, analytics keys if used.
 
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+`vercel.json` already contains the build/install settings. For Cloudflare Pages,
+run `pnpm build` and serve `.next`.
 
-### Frameworks & Libraries
+## Known placeholder assets
 
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
-![Svelte](https://img.shields.io/badge/Svelte-FF3E00?style=for-the-badge&logo=svelte&logoColor=white)
-![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+The template ships with remote branding assets that are still referenced:
 
-### AI/ML Stack
+- Social/tool icons load from `assets.chanhdai.com` (remote URLs in data files).
+- `public/profile.png` is the current placeholder photo.
+- `public/og-image.png` is referenced in metadata and should be created (1200×630).
+- The header logo and brand menu components still carry the template author's branding.
 
-![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
-![Hugging Face](https://img.shields.io/badge/🤗_Hugging_Face-FFD21E?style=for-the-badge)
-![LangChain](https://img.shields.io/badge/🦜_LangChain-1C3C3C?style=for-the-badge)
-![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white)
-![Transformers](https://img.shields.io/badge/Transformers-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)
+Replace these with your own assets when you get a chance. Everything else is yours.
 
-### Databases & Infrastructure
+## License & attribution
 
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
-![VictoriaMetrics](https://img.shields.io/badge/VictoriaMetrics-621773?style=for-the-badge)
-![Apache Kafka](https://img.shields.io/badge/Apache_Kafka-231F20?style=for-the-badge&logo=apache-kafka&logoColor=white)
+MIT. Based on [ncdai/chanhdai.com](https://github.com/ncdai/chanhdai.com); the
+original copyright notice is preserved in `LICENSE`.
 
-### DevOps & Tools
-
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-![Grafana](https://img.shields.io/badge/Grafana-F46800?style=for-the-badge&logo=grafana&logoColor=white)
-
----
-
-## 💡 What I'm Working On
-
-- 🤖 Building **AI-powered applications** using LLMs and RAG architectures
-- 🔧 Developing **scalable microservices** with FastAPI and Node.js
-- 📊 Implementing **observability solutions** with Grafana and time-series databases
-- 🚀 Exploring **Agentic AI** and **Model Context Protocol (MCP)**
-- 🌐 Creating **modern web experiences** with Next.js and React
-
----
-
-## 📫 Let's Connect
-
-<div align="center">
-
-[![Portfolio](https://img.shields.io/badge/Portfolio-FF7139?style=for-the-badge&logo=firefox&logoColor=white)](https://chanhdai.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/prathamesh-medage)
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:prathameshmedage7@gmail.com)
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/YOUR_USERNAME)
-
-**prathameshmedage7@gmail.com**
-
-</div>
+See [DEVELOPMENT.md](./DEVELOPMENT.md) for setup, scripts and troubleshooting.
