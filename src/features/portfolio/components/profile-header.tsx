@@ -5,7 +5,7 @@ import { VerifiedIcon } from "./verified-icon"
 
 export function ProfileHeader() {
   return (
-    <div className="screen-line-after relative flex flex-col items-center border-x border-edge px-4 pb-6">
+    <div className="screen-line-after relative flex flex-col items-start gap-2 border-x border-edge px-4 pb-5 sm:flex-row sm:items-end sm:gap-4">
       <div className="relative z-10 -mt-16 size-32 shrink-0 overflow-hidden rounded-full bg-background ring-4 ring-background sm:-mt-20 sm:size-40">
         <img
           className="size-full object-cover object-top select-none"
@@ -15,27 +15,29 @@ export function ProfileHeader() {
         />
       </div>
 
-      <div className="mt-3 flex items-center gap-2">
-        <h1 className="text-center text-3xl font-semibold tracking-tight">
-          {USER.displayName}
-        </h1>
+      <div className="flex flex-col items-start sm:pb-1">
+        <div className="flex items-center gap-2">
+          <h1 className="text-3xl font-semibold tracking-tight">
+            {USER.displayName}
+          </h1>
 
-        <VerifiedIcon
-          className="size-4.5 text-info select-none"
-          aria-label="Verified"
-        />
+          <VerifiedIcon
+            className="size-4.5 text-info select-none"
+            aria-label="Verified"
+          />
+        </div>
+
+        <FlipSentences
+          className="mt-1 font-pixel-square text-sm text-balance text-muted-foreground"
+          variants={{
+            initial: { y: -10, opacity: 0 },
+            animate: { y: -1, opacity: 1 },
+            exit: { y: 10, opacity: 0 },
+          }}
+        >
+          {USER.flipSentences}
+        </FlipSentences>
       </div>
-
-      <FlipSentences
-        className="mt-1 font-pixel-square text-sm text-balance text-muted-foreground"
-        variants={{
-          initial: { y: -10, opacity: 0 },
-          animate: { y: -1, opacity: 1 },
-          exit: { y: 10, opacity: 0 },
-        }}
-      >
-        {USER.flipSentences}
-      </FlipSentences>
     </div>
   )
 }
