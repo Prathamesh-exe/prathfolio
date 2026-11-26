@@ -6,10 +6,37 @@ export const EXPERIENCES: Experience[] = [
     companyName: "Varroc Connect, Pune",
     positions: [
       {
+        id: "varroc-jr-software-engineer",
+        title: "Jr. Software Engineer",
+        employmentPeriod: {
+          start: "07.2026",
+        },
+        employmentType: "Full-time",
+        icon: "code",
+        description: `- Wrote multiple ETL pipelines with query and throughput optimizations
+- Built a federated query engine from scratch that queries multiple databases, from RDBMS to time-series stores
+- Added an AI agent on top of the federated query engine
+- Wrote an MCP server exposing the engine and agent to LLM clients
+- Set up Docker-based deployment pipelines with Harbor as the container registry`,
+        skills: [
+          "ETL",
+          "Federated Query Engine",
+          "RDBMS",
+          "Time-Series Databases",
+          "AI Agents",
+          "MCP",
+          "Docker",
+          "Harbor",
+          "CI/CD",
+        ],
+        isExpanded: true,
+      },
+      {
         id: "varroc-sde-intern",
         title: "Software Development Intern",
         employmentPeriod: {
           start: "07.2025",
+          end: "07.2026",
         },
         employmentType: "Internship",
         icon: "code",

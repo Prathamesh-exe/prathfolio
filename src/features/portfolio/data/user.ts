@@ -22,7 +22,7 @@ export const USER = {
   jobTitle: "Full Stack Developer | AI Engineer",
   jobs: [
     {
-      title: "Software Developer Intern",
+      title: "Jr. Software Engineer",
       company: "Varroc Connect",
       website: "https://varrocconnect.com/",
     },
