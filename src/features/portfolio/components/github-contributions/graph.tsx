@@ -9,29 +9,28 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/base/ui/tooltip"
-import type { Activity } from "@/components/kibo-ui/contribution-graph"
 import {
   ContributionGraph,
   ContributionGraphBlock,
   ContributionGraphCalendar,
   ContributionGraphFooter,
   ContributionGraphLegend,
-  ContributionGraphTotalCount,
 } from "@/components/kibo-ui/contribution-graph"
 import { GITHUB_USERNAME, UTM_PARAMS } from "@/config/site"
+import type { GitHubContributions } from "@/features/portfolio/data/github-contributions"
 import { addQueryParams } from "@/utils/url"
 
 export function GitHubContributionGraph({
-  contributions,
+  data,
 }: {
-  contributions: Promise<Activity[]>
+  data: Promise<GitHubContributions>
 }) {
-  const data = use(contributions)
+  const { contributions, total } = use(data)
 
   return (
     <ContributionGraph
       className="mx-auto py-2"
-      data={data}
+      data={contributions}
       blockSize={11}
       blockMargin={3}
       blockRadius={0}
@@ -61,25 +60,24 @@ export function GitHubContributionGraph({
       </ContributionGraphCalendar>
 
       <ContributionGraphFooter className="px-2">
-        <ContributionGraphTotalCount>
-          {({ totalCount, year }) => (
-            <div className="text-muted-foreground">
-              {totalCount.toLocaleString("en")} contributions in {year} on{" "}
-              <a
-                className="font-medium underline underline-offset-4"
-                href={addQueryParams(
-                  `https://github.com/${GITHUB_USERNAME}`,
-                  UTM_PARAMS
-                )}
-                target="_blank"
-                rel="noopener"
-              >
-                GitHub
-              </a>
-              .
-            </div>
-          )}
-        </ContributionGraphTotalCount>
+        <div className="text-muted-foreground">
+          <span className="font-medium text-foreground">
+            {total.toLocaleString("en")}
+          </span>{" "}
+          contributions all time on{" "}
+          <a
+            className="font-medium underline underline-offset-4"
+            href={addQueryParams(
+              `https://github.com/${GITHUB_USERNAME}`,
+              UTM_PARAMS
+            )}
+            target="_blank"
+            rel="noopener"
+          >
+            GitHub
+          </a>
+          .
+        </div>
 
         <ContributionGraphLegend />
       </ContributionGraphFooter>

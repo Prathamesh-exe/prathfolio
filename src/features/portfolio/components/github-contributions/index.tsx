@@ -15,7 +15,7 @@ export function GitHubContributions() {
 
       <PanelContent className="px-2 py-3 sm:px-4">
         <Suspense fallback={<GitHubContributionFallback />}>
-          <GitHubContributionGraph contributions={contributions} />
+          <GitHubContributionGraph data={contributions} />
         </Suspense>
       </PanelContent>
     </Panel>
