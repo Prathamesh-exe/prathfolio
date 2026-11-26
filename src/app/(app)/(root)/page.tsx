@@ -1,5 +1,3 @@
-import type { ProfilePage as PageSchema, WithContext } from "schema-dts"
-
 import { About } from "@/features/portfolio/components/about"
 import { Certifications } from "@/features/portfolio/components/certifications"
 import { ContactMe } from "@/features/portfolio/components/contact-me"
@@ -19,7 +17,18 @@ export default function Page() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(getPageJsonLd()).replace(/</g, "\\u003c"),
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ProfilePage",
+            dateCreated: new Date(USER.dateCreated).toISOString(),
+            dateModified: new Date().toISOString(),
+            mainEntity: {
+              "@type": "Person",
+              name: USER.displayName,
+              identifier: USER.username,
+              image: USER.avatar,
+            },
+          }).replace(/</g, "\\u003c"),
         }}
       />
 
@@ -54,21 +63,6 @@ export default function Page() {
       </div>
     </>
   )
-}
-
-function getPageJsonLd(): WithContext<PageSchema> {
-  return {
-    "@context": "https://schema.org",
-    "@type": "ProfilePage",
-    dateCreated: new Date(USER.dateCreated).toISOString(),
-    dateModified: new Date().toISOString(),
-    mainEntity: {
-      "@type": "Person",
-      name: USER.displayName,
-      identifier: USER.username,
-      image: USER.avatar,
-    },
-  }
 }
 
 function Separator({ className }: { className?: string }) {

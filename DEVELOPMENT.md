@@ -79,6 +79,9 @@ emails/day. Restart the dev server after changing env vars.
 
 ## Troubleshooting
 
+- **`pnpm dev` uses webpack** — the home page currently fails to render under
+  Turbopack dev (`Element type is invalid` from a Base UI component). Production
+  builds still use Turbopack and work fine. Remove `--webpack` once upstream fixes it.
 - **`Unsupported engine: wanted 22.x`** — you're on a newer Node; safe to ignore,
   or switch with `nvm use` / `fnm use`.
 - **Port 1408 already in use** — stop the old server:

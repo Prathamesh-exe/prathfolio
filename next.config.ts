@@ -4,18 +4,12 @@ import path from "path"
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   transpilePackages: ["next-mdx-remote"],
-  allowedDevOrigins: ["chanhdai-macbook.local"],
   turbopack: {
     root: path.join(__dirname, "."),
   },
   devIndicators: false,
   images: {
     remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "assets.chanhdai.com",
-        port: "",
-      },
       {
         protocol: "https",
         hostname: "images.unsplash.com",

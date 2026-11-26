@@ -2,7 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "testimonial",
   "title": "Testimonial",
-  "author": "ncdai <dai@chanhdai.com>",
+  "author": "Prathamesh Medage <prathameshmedage7@gmail.com>",
   "description": "A testimonial component for displaying user feedback with author information and verified badge.",
   "files": [
     {

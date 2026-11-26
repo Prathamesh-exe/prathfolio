@@ -15,16 +15,7 @@ export function SiteFooter() {
         </p>
 
         <p className="mb-4 px-4 text-center font-mono text-sm text-balance text-muted-foreground">
-          Template by{" "}
-          <a
-            className="link transition-[color] hover:text-foreground"
-            href="https://chanhdai.com"
-            target="_blank"
-            rel="noopener"
-          >
-            ncdai
-          </a>
-          . Source code on{" "}
+          Built with Next.js and Tailwind CSS. Source code on{" "}
           <a
             className="link transition-[color] hover:text-foreground"
             href={SOURCE_CODE_GITHUB_URL}

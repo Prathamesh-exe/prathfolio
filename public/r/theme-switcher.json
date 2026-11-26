@@ -2,7 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "theme-switcher",
   "title": "Theme Switcher",
-  "author": "ncdai <dai@chanhdai.com>",
+  "author": "Prathamesh Medage <prathameshmedage7@gmail.com>",
   "description": "A theme switcher component for Next.js apps with next-themes and Tailwind CSS, supporting system, light, and dark modes.",
   "dependencies": [
     "next-themes",
@@ -16,6 +16,6 @@
       "type": "registry:component"
     }
   ],
-  "docs": "https://chanhdai.com/components/theme-switcher",
+  "docs": "https://prathameshtech.in/components/theme-switcher",
   "type": "registry:component"
 }

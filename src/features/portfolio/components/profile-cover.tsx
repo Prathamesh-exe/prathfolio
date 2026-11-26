@@ -1,5 +1,5 @@
-import { ArtisticBanner } from "./artistic-banner"
+import { HeroVideo } from "./hero-video"
 
 export function ProfileCover() {
-  return <ArtisticBanner />
+  return <HeroVideo />
 }

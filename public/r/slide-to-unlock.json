@@ -2,7 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "slide-to-unlock",
   "title": "Slide to Unlock",
-  "author": "ncdai <dai@chanhdai.com>",
+  "author": "Prathamesh Medage <prathameshmedage7@gmail.com>",
   "description": "A sleek, interactive slider inspired by the classic iPhone OS 'slide to unlock' gesture.",
   "dependencies": [
     "motion"
@@ -17,6 +17,6 @@
       "type": "registry:component"
     }
   ],
-  "docs": "https://chanhdai.com/components/slide-to-unlock",
+  "docs": "https://prathameshtech.in/components/slide-to-unlock",
   "type": "registry:component"
 }

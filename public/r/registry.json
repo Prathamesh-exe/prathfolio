@@ -1,12 +1,12 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
-  "name": "ncdai",
-  "homepage": "https://chanhdai.com/components",
+  "name": "prathfolio",
+  "homepage": "https://prathameshtech.in/components",
   "items": [
     {
       "name": "utils",
       "title": "Utility Functions",
-      "author": "ncdai <dai@chanhdai.com>",
+      "author": "Prathamesh Medage <prathameshmedage7@gmail.com>",
       "dependencies": [
         "clsx",
         "tailwind-merge"
@@ -49,7 +49,7 @@
     {
       "name": "theme-switcher",
       "title": "Theme Switcher",
-      "author": "ncdai <dai@chanhdai.com>",
+      "author": "Prathamesh Medage <prathameshmedage7@gmail.com>",
       "description": "A theme switcher component for Next.js apps with next-themes and Tailwind CSS, supporting system, light, and dark modes.",
       "dependencies": [
         "next-themes",
@@ -62,13 +62,13 @@
           "type": "registry:component"
         }
       ],
-      "docs": "https://chanhdai.com/components/theme-switcher",
+      "docs": "https://prathameshtech.in/components/theme-switcher",
       "type": "registry:component"
     },
     {
       "name": "flip-sentences",
       "title": "Flip Sentences",
-      "author": "ncdai <dai@chanhdai.com>",
+      "author": "Prathamesh Medage <prathameshmedage7@gmail.com>",
       "dependencies": [
         "motion"
       ],
@@ -83,7 +83,7 @@
     {
       "name": "apple-hello-effect",
       "title": "Apple Hello Effect",
-      "author": "ncdai <dai@chanhdai.com>",
+      "author": "Prathamesh Medage <prathameshmedage7@gmail.com>",
       "description": "Create a Xin chào and Hello writing effect inspired by Apple using Motion for React.",
       "dependencies": [
         "motion"
@@ -94,13 +94,13 @@
           "type": "registry:component"
         }
       ],
-      "docs": "https://chanhdai.com/components/apple-hello-effect",
+      "docs": "https://prathameshtech.in/components/apple-hello-effect",
       "type": "registry:component"
     },
     {
       "name": "wheel-picker",
       "title": "Wheel Picker",
-      "author": "ncdai <dai@chanhdai.com>",
+      "author": "Prathamesh Medage <prathameshmedage7@gmail.com>",
       "description": "iOS-like wheel picker for React with smooth inertia scrolling and infinite loop support.",
       "dependencies": [
         "@ncdai/react-wheel-picker"
@@ -111,13 +111,13 @@
           "type": "registry:component"
         }
       ],
-      "docs": "https://chanhdai.com/components/react-wheel-picker",
+      "docs": "https://prathameshtech.in/components/react-wheel-picker",
       "type": "registry:component"
     },
     {
       "name": "work-experience",
       "title": "Work Experience",
-      "author": "ncdai <dai@chanhdai.com>",
+      "author": "Prathamesh Medage <prathameshmedage7@gmail.com>",
       "description": "Displays a list of work experiences with role details and durations.",
       "dependencies": [
         "react-markdown",
@@ -139,13 +139,13 @@
       "css": {
         "@plugin @tailwindcss/typography": {}
       },
-      "docs": "https://chanhdai.com/components/work-experience",
+      "docs": "https://prathameshtech.in/components/work-experience",
       "type": "registry:component"
     },
     {
       "name": "shimmering-text",
       "title": "Shimmering Text",
-      "author": "ncdai <dai@chanhdai.com>",
+      "author": "Prathamesh Medage <prathameshmedage7@gmail.com>",
       "description": "Smooth shimmering text animation built with Motion.",
       "dependencies": [
         "motion"
@@ -161,7 +161,7 @@
     {
       "name": "slide-to-unlock",
       "title": "Slide to Unlock",
-      "author": "ncdai <dai@chanhdai.com>",
+      "author": "Prathamesh Medage <prathameshmedage7@gmail.com>",
       "description": "A sleek, interactive slider inspired by the classic iPhone OS 'slide to unlock' gesture.",
       "dependencies": [
         "motion"
@@ -175,26 +175,26 @@
           "type": "registry:component"
         }
       ],
-      "docs": "https://chanhdai.com/components/slide-to-unlock",
+      "docs": "https://prathameshtech.in/components/slide-to-unlock",
       "type": "registry:component"
     },
     {
       "name": "testimonials-marquee",
       "title": "Testimonials Marquee",
-      "author": "ncdai <dai@chanhdai.com>",
+      "author": "Prathamesh Medage <prathameshmedage7@gmail.com>",
       "description": "A testimonials marquee component for showcasing user feedback in a scrolling format.",
       "registryDependencies": [
         "@kibo-ui/marquee",
         "@ncdai/testimonial"
       ],
-      "docs": "https://chanhdai.com/components/testimonials-marquee",
+      "docs": "https://prathameshtech.in/components/testimonials-marquee",
       "type": "registry:component",
       "files": []
     },
     {
       "name": "testimonial",
       "title": "Testimonial",
-      "author": "ncdai <dai@chanhdai.com>",
+      "author": "Prathamesh Medage <prathameshmedage7@gmail.com>",
       "description": "A testimonial component for displaying user feedback with author information and verified badge.",
       "files": [
         {
@@ -207,7 +207,7 @@
     {
       "name": "github-stars",
       "title": "GitHub Stars",
-      "author": "ncdai <dai@chanhdai.com>",
+      "author": "Prathamesh Medage <prathameshmedage7@gmail.com>",
       "description": "Display GitHub repository star count with formatted numbers and a tooltip showing the full count.",
       "registryDependencies": [
         "button",
@@ -224,7 +224,7 @@
     {
       "name": "scroll-fade-effect",
       "title": "Scroll Fade Effect",
-      "author": "ncdai <dai@chanhdai.com>",
+      "author": "Prathamesh Medage <prathameshmedage7@gmail.com>",
       "description": "A React component that adds a fade effect to content as you scroll.",
       "files": [
         {
@@ -311,7 +311,7 @@
     {
       "name": "consent-manager",
       "title": "Consent Manager",
-      "author": "ncdai <dai@chanhdai.com>",
+      "author": "Prathamesh Medage <prathameshmedage7@gmail.com>",
       "description": "A React component for managing user consent for cookies and tracking in Next.js applications.",
       "dependencies": [
         "@c15t/nextjs"
@@ -348,7 +348,7 @@
     {
       "name": "copy-button",
       "title": "Copy Button",
-      "author": "ncdai <dai@chanhdai.com>",
+      "author": "Prathamesh Medage <prathameshmedage7@gmail.com>",
       "description": "Copy text to clipboard with visual feedback and animation.",
       "dependencies": [
         "lucide-react",
@@ -372,7 +372,7 @@
     {
       "name": "code-block-command",
       "title": "Code Block Command",
-      "author": "ncdai <dai@chanhdai.com>",
+      "author": "Prathamesh Medage <prathameshmedage7@gmail.com>",
       "description": "A code block command component for displaying installation commands with copy functionality.",
       "dependencies": [
         "@base-ui/react",

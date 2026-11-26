@@ -51,6 +51,7 @@ public/                       images, icons, generated registry JSON
 | Social links                                | `src/features/portfolio/data/social-links.ts`                 |
 | Testimonials / bookmarks                    | `src/features/portfolio/data/testimonials.ts`, `bookmarks.ts` |
 | Blog posts                                  | `src/features/blog/content/*.mdx`                             |
+| Hero video                                  | `public/videos/hero.mp4`                                      |
 | Profile photo / OG image                    | `public/profile.png`, `public/og-image.png`                   |
 
 ## Routes
@@ -77,20 +78,15 @@ The app lives at the repository root, so Vercel needs no Root Directory override
 `vercel.json` already contains the build/install settings. For Cloudflare Pages,
 run `pnpm build` and serve `.next`.
 
-## Known placeholder assets
+## Placeholder assets
 
-The template ships with remote branding assets that are still referenced:
-
-- Social/tool icons load from `assets.chanhdai.com` (remote URLs in data files).
-- `public/profile.png` is the current placeholder photo.
-- `public/og-image.png` is referenced in metadata and should be created (1200×630).
-- The header logo and brand menu components still carry the template author's branding.
-
-Replace these with your own assets when you get a chance. Everything else is yours.
+- `public/profile.png` is a placeholder photo — replace it with yours.
+- `public/og-image.png` is referenced in metadata but doesn't exist yet; add a
+  1200×630 image for social previews.
+- Icons and images are served locally from `public/images/`.
 
 ## License & attribution
 
-MIT. Based on [ncdai/chanhdai.com](https://github.com/ncdai/chanhdai.com); the
-original copyright notice is preserved in `LICENSE`.
+MIT. The original copyright notice is preserved in `LICENSE`.
 
 See [DEVELOPMENT.md](./DEVELOPMENT.md) for setup, scripts and troubleshooting.
