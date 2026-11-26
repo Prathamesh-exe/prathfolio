@@ -162,4 +162,35 @@ export const TECH_STACK: TechStack[] = [
     href: "https://huggingface.co/",
     categories: ["AI", "ML Platform"],
   },
+  {
+    key: "claude",
+    title: "Claude",
+    href: "https://claude.ai/",
+    categories: ["AI", "LLM"],
+  },
+  {
+    key: "pydantic-ai",
+    title: "Pydantic AI",
+    href: "https://ai.pydantic.dev/",
+    categories: ["AI", "LLM"],
+  },
+  {
+    key: "fastmcp",
+    title: "FastMCP",
+    href: "https://gofastmcp.com/",
+    categories: ["AI", "MCP"],
+  },
+  {
+    key: "fastagent",
+    title: "FastAgent",
+    href: "https://fast-agent.ai/",
+    categories: ["AI", "Agents"],
+  },
+  {
+    key: "opencode",
+    title: "OpenCode",
+    href: "https://opencode.ai/",
+    categories: ["Tools", "AI"],
+    theme: true,
+  },
 ]

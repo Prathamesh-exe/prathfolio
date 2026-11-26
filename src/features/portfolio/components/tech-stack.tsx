@@ -23,7 +23,7 @@ export function TechStack() {
   return (
     <Panel id="stack">
       <PanelHeader>
-        <PanelTitle>Stack</PanelTitle>
+        <PanelTitle>Stack &amp; Tools</PanelTitle>
       </PanelHeader>
 
       <PanelContent className="space-y-4 py-5">

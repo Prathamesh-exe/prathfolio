@@ -93,7 +93,7 @@ const PORTFOLIO_LINKS: CommandLinkItem[] = [
     icon: QuoteIcon,
   },
   {
-    title: "Tech Stack",
+    title: "Stack & Tools",
     href: "/#stack",
     icon: LayersIcon,
   },
