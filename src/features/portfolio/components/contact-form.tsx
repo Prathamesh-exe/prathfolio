@@ -1,6 +1,6 @@
 "use client"
 
-import { Mail, MapPin, Phone, Send } from "lucide-react"
+import { Mail, MapPin, Send } from "lucide-react"
 import { useState } from "react"
 import { toast } from "sonner"
 
@@ -83,21 +83,6 @@ export function ContactForm() {
                 className="font-mono text-sm text-foreground underline decoration-muted-foreground underline-offset-4 transition-colors hover:text-primary hover:decoration-primary"
               >
                 prathameshmedage7@gmail.com
-              </a>
-            </div>
-          </div>
-
-          <div className="flex items-start gap-3">
-            <Phone className="mt-1 size-5 shrink-0 text-muted-foreground" />
-            <div className="flex flex-col gap-1">
-              <span className="text-sm font-medium text-muted-foreground">
-                Phone
-              </span>
-              <a
-                href="tel:+917972254365"
-                className="font-mono text-sm text-foreground underline decoration-muted-foreground underline-offset-4 transition-colors hover:text-primary hover:decoration-primary"
-              >
-                +91 7972254365
               </a>
             </div>
           </div>
