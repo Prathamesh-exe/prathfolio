@@ -52,7 +52,7 @@ public/                       images, icons, generated registry JSON
 | Testimonials / bookmarks                    | `src/features/portfolio/data/testimonials.ts`, `bookmarks.ts` |
 | Blog posts                                  | `src/features/blog/content/*.mdx`                             |
 | Hero video                                  | `public/videos/hero.mp4`                                      |
-| Profile photo / OG image                    | `public/profile.png`, `public/og-image.png`                   |
+| Profile photo / OG image                    | `public/profile.jpg`, `public/og-image.png`                   |
 
 ## Routes
 
@@ -80,7 +80,7 @@ run `pnpm build` and serve `.next`.
 
 ## Placeholder assets
 
-- `public/profile.png` is a placeholder photo — replace it with yours.
+- `public/profile.jpg` is your profile photo (update it to change your avatar).
 - `public/og-image.png` is referenced in metadata but doesn't exist yet; add a
   1200×630 image for social previews.
 - Icons and images are served locally from `public/images/`.

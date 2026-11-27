@@ -34,7 +34,7 @@ export const USER = {
 - Building scalable applications with **databases** (MySQL, MongoDB, PostgreSQL, VictoriaMetrics) and **message queues** (Kafka).
 - Always learning and exploring new technologies in **AI**, **Data Science**, and **Full Stack Development**.
 `,
-  avatar: "/profile.png", // TODO: Replace with your profile image
+  avatar: "/profile.jpg",
   ogImage: "/og-image.png", // TODO: Create your OG image
   timeZone: "Asia/Kolkata",
   keywords: [
